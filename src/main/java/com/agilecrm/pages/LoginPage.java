@@ -18,14 +18,13 @@ public class LoginPage extends BaseClass {
 		WebElement signIn = driver.findElement(By.xpath("//input[@type='submit']"));
 		signIn.click();
 
-		/*if (driver.findElement(By.xpath("//a[@class='close']/parent::*")).isDisplayed()) {
+		if (driver.findElement(By.xpath("//a[@class='close']/parent::*")).isDisplayed()) {
 			System.out.println("Invalid username :" + username + "or password :" + password);
 
 		} else {
 			driver.findElement(By.xpath("//li[@id='fat-menu']/a")).click();
 			driver.findElement(By.xpath("//*[@id=\"fatMenuModal\"]/div[2]/div/div/div/div[3]/div/a")).click();
-		}*/
-
+		}
 	}
 
 }

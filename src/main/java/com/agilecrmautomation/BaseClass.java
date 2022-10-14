@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -120,5 +121,17 @@ public class BaseClass {
 		option.setExperimentalOption("excludeSwitches", Arrays.asList("disable-popup-blocking"));
 		return option;
 	}
+	
+	 Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+		       .withTimeout(Duration.ofSeconds(30))
+		       .pollingEvery(5)
+		       .ignoring(NoSuchElementException.class);
+
+		   WebElement foo = wait.until(new Function<WebDriver, WebElement>() {
+		     public WebElement apply(WebDriver driver) {
+		       return driver.findElement(By.id("foo"));
+		     }
+		   });
+
 
 }
