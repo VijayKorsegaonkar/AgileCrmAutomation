@@ -30,9 +30,10 @@ public void archiveDeal()
 		click(By.xpath("//div[@class='panel-body']/descendant::button[1]"), "click on dropdown");
 		click(By.id("dealdetail-archive"), "click on archieve");
 		click(By.id("deal-quick-archive"), "click on confirm");
+		
 	}
 }
-		
+
 	
 
 /*ArrayList<String> dealNames = new ArrayList<>();

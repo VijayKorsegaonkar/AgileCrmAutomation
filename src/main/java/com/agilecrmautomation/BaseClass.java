@@ -31,10 +31,11 @@ public class BaseClass {
 		case "chrome":
 			// System.setProperty("webdriver.chrome.driver", "D:\\Tools\\chromedriver.exe");
 			WebDriverManager.chromedriver().setup();
-			//ChromeOptions option=new ChromeOptions();
+		ChromeOptions option=new ChromeOptions();
 			
 			//option.setHeadless(True);
 			driver = new ChromeDriver();
+			
 			
 			break;
 
@@ -103,6 +104,11 @@ public class BaseClass {
 		Select select = new Select(element);
 		select.selectByIndex(index);
 
+	}
+	{
+		
+		
+		System.out.println("Vijay");
 	}
 
 	public static void selectDropdownByValue(WebElement element, String val) {

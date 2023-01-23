@@ -1,4 +1,4 @@
-package com.agilecrm.pages;
+ package com.agilecrm.pages;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -28,6 +28,7 @@ public class LinksPage extends BaseClass {
 					connection.connect();
 					int statusCode = connection.getResponseCode();
 					if (statusCode != 200) {
+						
 						System.out.println(statusCode + " url:" + links);
 					}
 					// connection.disconnect();

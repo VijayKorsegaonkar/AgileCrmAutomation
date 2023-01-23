@@ -18,7 +18,7 @@ public class CheckBox extends BaseClass {
 
 		driver.findElement(By.xpath("//span[contains(text(),'HTML')]")).click();
 		List<WebElement> all=driver.findElements(By.xpath("//ul[contains(@class,'multiselect-container')]/li[not(@class='multiselect-item multiselect-group')]"));
-for(WebElement element:all) {
+for(WebElement element:all) {							   
 	System.out.println(element.getText());
 	if(!(element.findElement(By.tagName("input")).isSelected())) {
 		element.click();
